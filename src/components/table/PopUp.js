@@ -23,50 +23,7 @@ const PopUp = ({
 
   const [showModal, setShowModal] = useState(false)
 
-  // const [input, setInput] = useState(nodes)
-  // const [surnName, setSurnName] = useState('')
-  // const [firstName, setFirstName] = useState('')
-  // const [middleName, setMiddleName] = useState('')
-  // const [id, setId] = useState('')
-  // const [country, setCountry] = useState('')
-    
-   
-
-  // const fun = () => {
-  //   let arr = []
-
-  //   dataValue.data.forEach((data) => {
-  //     if (
-  //       data.id.toString().toLowerCase().includes(id) ||
-  //       data.Surnname.toLowerCase().includes(surnName) ||
-  //       data.first_name.toLowerCase().includes(firstName) ||
-  //       data.middle_name.toLowerCase().includes(middleName) ||
-  //       data.country_code.toLowerCase().includes(country)
-  //     ) {
-  //       arr.push(dataValue.data)
-  //       // setFirstName(data.Surnname)
-  //       // setFirstName(data.firstName)
-  //       console.log(data.firstName)
-  //       setFirstName(data.id)
-  //       console.log(data.id)
-  //     }
-  //   })
-  //   // console.log(arr)
-  //   setInput(arr)
-  //   console.log(input)
-  //   // console.log(setInput)
-   
-  // }
-
-  let query = (
-  //   {
-  //   firstName,
-  //   Surnname,
-  //   middleName,
-  //   id,
-  //   country,
-  // }
-  ) =>{
+  let query = () =>{
     let filtered = dataValue.data.filter((item) => item.first_name.includes(firstName) ||
      item.Surnname.includes(surnName) ||
      item.middle_name.includes(middleName) ||
@@ -116,10 +73,8 @@ const PopUp = ({
                         Country code
                       </label>
                       <h4 className='m-auto p-2'>Value</h4>
-                      {/* <input className='shadow appearance-none border rounded w-full py-2 px-1 text-black' /> */}
 
                       <Input
-                        //   value={country}
                         type='text'
                         onChange={(e) => {
                           setCountry(e)
@@ -135,14 +90,11 @@ const PopUp = ({
                       <h4 className='m-auto p-2'>Value</h4>
                       <Input
                         type='text'
-                        // onChange={() => { fun() }}
                         onChange={(e) => {
                           setFirstName(e)
-                          // console.log(e)
-                          //   console.log(firstName)
+                          
                         }}
                       />
-                      {/* <input className='shadow appearance-none border rounded w-full py-2 px-1 text-black' /> */}
                     </div>
                     <div className='flex text-black text-sm font-bold mb-1'>
                       <h4 className='m-auto'>Field:</h4>
@@ -157,9 +109,7 @@ const PopUp = ({
                           console.log(surnName)
                         }}
                         name='surnName'
-                        // onChange={(e) => {
-                        //   setSurnName(e.target.value)
-                        // }}
+                       
                       />
                     </div>
                     <div className='flex text-black text-sm font-bold mb-1'>
@@ -175,7 +125,6 @@ const PopUp = ({
                           console.log(middleName)
                         }}
                       />
-                      {/* <input className='shadow appearance-none border rounded w-full py-2 px-1 text-black' /> */}
                     </div>
                     <div className='flex text-black text-sm font-bold mb-1'>
                       <h4 className='m-auto'>Field:</h4>
@@ -190,7 +139,6 @@ const PopUp = ({
                           console.log(id)
                         }}
                       />
-                      {/* <input className='shadow appearance-none border rounded w-full py-2 px-1 text-black' /> */}
                     </div>
                   </div>
                 </div>
@@ -205,9 +153,7 @@ const PopUp = ({
                   <Button
                     className=' bg-gray-200 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ml-2'
                     type='button'
-                    // onSubmit={fun}
                     onClick={() => {
-                      // fun()
                       query()
                       setShowModal(false)
                     }}

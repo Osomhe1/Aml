@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Table, Column, HeaderCell, Cell, } from 'rsuite-table'
 import dataValue from '../data.json'
 import PopUp from './PopUp'
 
 export default function TableData() {
 
-  // const nodes = dataValue
 
   console.log(dataValue);
 
@@ -17,48 +16,6 @@ export default function TableData() {
   const [middleName, setMiddleName] = useState('')
   const [id, setId] = useState('')
   const [country, setCountry] = useState('')
-
-  // const inputHandle = (e) => {
-  //   // e.preventDefault();
-  //   let lowerCase = e.target.value.toLowerCase()
-  //   console.log(e.target.value)
-  //   //  console.log(searchData, 'searchdata')
-  //   //  setSearchData(lowerCase, 'lowercase')
-
-  //   //    const data = {
-  //   //      nodes: Object.values(nodes).forEach((item) => {
-  //   //        return  item.name?.toLowerCase().includes(lowerCase) !== item
-  //   //      } )
-  //   //    }
-  //   //   console.log(nodes);
-  // }
-
-  // const fun = (e) => {
-  //   let arr = []
-
-  //   nodes.forEach((data) => {
-  //     if (
-  //       data.Surnname.toLowerCase().includes(surnName.toLowerCase())
-  //       // ||
-  //       // data.id.toLowerCase().includes(e.toLowerCase()) ||
-  //       // data.first_name.toLowerCase().includes(e.toLowerCase()) ||
-  //       // data.middle_name.toLowerCase().includes(e.toLowerCase()) ||
-  //       // data.country_code.toLowerCase().includes(e.toLowerCase())
-  //     ) {
-  //       arr.push(data)
-  //     }
-  //   })
-
-  //   console.log(arr)
-  //   setInput(arr)
-  // }
-
-  // useEffect(() => {
-  //   console.log(surnName)
-  // }, [surnName])
-
-
- 
 
   return (
     <div>
@@ -411,7 +368,6 @@ export default function TableData() {
       <Table
         height={400}
         data={input.data}
-        // data={nodes}
         onRowClick={(data) => {
           console.log(data)
         }}
